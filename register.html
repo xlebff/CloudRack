@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Регистрация — CloudRack</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-container">
+    <h2>Создайте аккаунт</h2>
+    <form novalidate>
+      <label for="registerName">Имя</label>
+      <input type="text"
+             id="registerName"
+             required
+             minlength="2"
+             maxlength="50"
+             placeholder="Ваше имя"
+             title="Введите ваше имя (от 2 до 50 символов)" />
+
+      <label for="registerEmail">Email</label>
+      <input type="email"
+             id="registerEmail"
+             required
+             placeholder="example@example.com"
+             title="Введите корректный email адрес" />
+
+      <label for="registerPassword">Пароль</label>
+      <input type="password"
+             id="registerPassword"
+             required
+             minlength="6"
+             placeholder="Не менее 6 символов"
+             title="Пароль должен содержать минимум 6 символов" />
+
+      <label for="confirmPassword">Подтвердите пароль</label>
+      <input type="password"
+             id="confirmPassword"
+             required
+             placeholder="Повторите пароль"
+             title="Введите тот же пароль ещё раз" />
+
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+    <p class="switch-auth">
+      Уже есть аккаунт? <a href="login.html">Войдите</a>
+    </p>
+  </div>
+
+</body>
+</html>
