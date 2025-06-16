@@ -797,3 +797,173 @@ details p {
   margin-bottom: 30px;
   color: #ccc;
 }
+
+/* ==================== АДАПТИВНОСТЬ ==================== */
+
+/* Для экранов меньше 1200px */
+@media (max-width: 1200px) {
+  .compare-table {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .compare-row div:nth-child(n+4) {
+    grid-column: span 2;
+  }
+}
+
+/* Для экранов меньше 992px (планшеты) */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  
+  .auth-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .auth-links a {
+    margin: 5px 10px;
+  }
+  
+  .slogans, .value-cards, .team-members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .compare-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .compare-row div:nth-child(n+3) {
+    grid-column: span 1;
+  }
+}
+
+/* Для экранов меньше 768px (мобильные устройства) */
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 50px;
+  }
+  
+  .hero {
+    padding: 40px 15px;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .slogans, .value-cards, .team-members, .posts {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+  
+  .compare-table {
+    display: block;
+  }
+  
+  .compare-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .compare-row div {
+    flex: 1 0 50%;
+    padding: 8px;
+    text-align: left;
+    border-bottom: none;
+  }
+  
+  .compare-row.header div {
+    font-weight: bold;
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .server-builder {
+    padding: 15px;
+  }
+  
+  .auth-container {
+    padding: 20px;
+  }
+  
+  footer {
+    padding: 20px 0;
+  }
+}
+
+/* Для экранов меньше 576px (маленькие мобильные) */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .auth-links a {
+    font-size: 0.9rem;
+    margin: 3px 5px;
+  }
+  
+  .btn-register {
+    padding: 6px 12px;
+  }
+  
+  .compare-row div {
+    flex: 1 0 100%;
+  }
+  
+  .post-card, .member-card, .slogan-card, .value-card {
+    padding: 15px;
+  }
+  
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta p {
+    font-size: 1rem;
+  }
+  
+  .btn-contact, .btn-register {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Для очень маленьких экранов (менее 400px) */
+@media (max-width: 400px) {
+  .auth-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .auth-links a {
+    margin: 3px 0;
+  }
+  
+  .server-builder select, 
+  .server-builder .calculate-btn,
+  form input,
+  form button {
+    padding: 8px;
+  }
+  
+  .back-to-top {
+    padding: 8px 12px;
+    font-size: 1rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
