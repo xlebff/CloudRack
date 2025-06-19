@@ -6,11 +6,12 @@
   <title>CloudRack — Аренда серверов</title>
   <link rel="stylesheet" href="styles/main.css" />
 </head>
+<script src="js/main.js"></script>
 <body>
 
-<header>
-  <h1>CloudRack</h1>
-  <nav>
+  <header>
+    <h1>CloudRack</h1>
+      <nav>
 
     <div class="auth-links">
       <a href="index.html">Главная</a>
@@ -23,7 +24,7 @@
 
     </div>
   </nav>
-</header>
+  </header>
 
 
   <main>
@@ -131,6 +132,13 @@
 
       <a href="login.html" class="calculate-btn">Рассчитать стоимость</a>
     </div>
+	<iframe 
+    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac107b62547549f41a09ecd66f1e25901e04f48a1d642091095fc3deb1f03c68f&amp;source=constructor" 
+    width="500" 
+    height="400" 
+    frameborder="0"
+    style="border-radius: 10%;   margin-top: 5%;"
+></iframe>
   </div>
 </section>
   </main>
@@ -141,7 +149,8 @@
     <p>&copy; 2025 CloudRack. Все права защищены.</p>
   </footer>
 
-  <a href="#" class="back-to-top">&#8593;</a>
+  <a href="#" id="backToTop" class="back-to-top">↑</a>
+
 
 </body>
 </html>
