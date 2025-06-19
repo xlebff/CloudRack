@@ -5,27 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>О нас — CloudRack</title>
   <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/header.css">
 </head>
-<script src="js/main.js"></script>
 <body>
+    <header class="header">
+        <h1 class="header__title">CloudRack</h1>
 
-  <!-- Хедер -->
-  <header>
-    <h1>CloudRack</h1>
-    <nav>
+        <button class="header__burger" aria-label="Меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </button>
 
-    <div class="auth-links">
-      <a href="index.html">Главная</a>
-      <a href="blog.html">Наш Блог</a>
-      <a href="pricing.html">Цены</a>      
-      <a href="about.html">О нас</a>
-      <a href="faq.html">Вопросы</a>
-      <a href="login.html">Вход</a>
-      <a href="register.html" class="btn-register">Регистрация</a>
-
-    </div>
-  </nav>
-  </header>
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__element"><a href="index.html">Главная</a></li>
+                <li class="navbar__element"><a href="blog.html">Наш Блог</a></li>
+                <li class="navbar__element"><a href="pricing.html">Цены</a></li>
+                <li class="navbar__element"><a href="about.html">О нас</a></li>
+                <li class="navbar__element"><a href="faq.html">Вопросы</a></li>
+                <li class="navbar__element"><a href="login.html">Вход</a></li>
+                <li class="navbar__element navbar__button"><a href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
 
   <!-- Главный баннер -->
   <section class="hero">
@@ -134,6 +137,7 @@
     <p><a href="contact.html">Контакты</a></p>
     <p>&copy; 2025 CloudRack. Все права защищены.</p>
   </footer>
-
+<script src="js/burger.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

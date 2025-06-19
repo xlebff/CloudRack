@@ -1,156 +1,161 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CloudRack — Аренда серверов</title>
-  <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CloudRack — Аренда серверов</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/pricing.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/builder.css">
 </head>
-<script src="js/main.js"></script>
 <body>
+    <header class="header">
+        <h1 class="header__title">CloudRack</h1>
 
-  <header>
-    <h1>CloudRack</h1>
-      <nav>
+        <button class="header__burger" aria-label="Меню">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </button>
 
-    <div class="auth-links">
-      <a href="index.html">Главная</a>
-      <a href="blog.html">Наш Блог</a>
-      <a href="pricing.html">Цены</a>      
-      <a href="about.html">О нас</a>
-      <a href="faq.html">Вопросы</a>
-      <a href="login.html">Вход</a>
-      <a href="register.html" class="btn-register">Регистрация</a>
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__element"><a href="index.html">Главная</a></li>
+                <li class="navbar__element"><a href="blog.html">Наш Блог</a></li>
+                <li class="navbar__element"><a href="pricing.html">Цены</a></li>
+                <li class="navbar__element"><a href="about.html">О нас</a></li>
+                <li class="navbar__element"><a href="faq.html">Вопросы</a></li>
+                <li class="navbar__element"><a href="login.html">Вход</a></li>
+                <li class="navbar__element navbar__button"><a href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </div>
-  </nav>
-  </header>
+    <main class="main" role="main">
+        <section class="hero fade-in">
+            <h2 class="hero__title">Высокопроизводительные решения</h2>
+            <p class="hero__info">Мы предоставляем в аренду выделенные серверы и готовые кластеры с возможностью масштабирования под любые задачи. Выбирайте конфигурацию или соберите свою инфраструктуру с нуля. Наши сервера имеют высокую пропускную способность.</p>
+        </section>
 
+        <section class="fade-in pricing">
+            <h2 class="pricing__title">Наши тарифы</h2>
 
-  <main>
-    <section>
-      <h2>Высокопроизводительные решения</h2>
-      <p>
-        Мы предоставляем в аренду выделенные серверы и готовые кластеры с возможностью масштабирования под любые задачи.
-        Выбирайте конфигурацию или соберите свою инфраструктуру с нуля. Наши сервера имеют высокую пропускную способность.
-      </p>
-    </section>
+            <section class="pricing-container">
+                <article class="pricing__item">
+                    <h3 class="pricing__item__title">Стартовый</h3>
+                    <ul class="pricing__item__list">
+                        <li class="pricing__item__element">1x CPU @ 3.5GHz</li>
+                        <li class="pricing__item__element">8GB RAM</li>
+                        <li class="pricing__item__element">256GB SSD</li>
+                        <li class="pricing__item__element">1 IP-адрес</li>
+                        <li class="pricing__item__element">До 100 Мбит/с</li>
+                    </ul>
+                    <strong class="pricing__item__price">от $29/мес</strong>
+                </article>
 
+                <article class="pricing__item">
+                    <h3 class="pricing__item__title">Профессиональный</h3>
+                    <ul class="pricing__item__list">
+                        <li class="pricing__item__element">2x CPU @ 3.8GHz</li>
+                        <li class="pricing__item__element">32GB RAM</li>
+                        <li class="pricing__item__element">1TB NVMe</li>
+                        <li class="pricing__item__element">3 IP-адреса</li>
+                        <li class="pricing__item__element">До 1 Гбит/с</li>
+                    </ul>
+                    <strong class="pricing__item__price">от $99/мес</strong>
+                </article>
 
-    <section id="pricing">
-      <h2>Наши тарифы</h2>
-      <div class="pricing">
-        <div class="card">
-          <h3>Стартовый</h3>
-          <ul>
-            <li>1x CPU @ 3.5GHz</li>
-            <li>8GB RAM</li>
-            <li>256GB SSD</li>
-            <li>1 IP-адрес</li>
-            <li>До 100 Мбит/с</li>
-          </ul>
-          <strong>от $29/мес</strong>
-        </div>
-        <div class="card">
-          <h3>Профессиональный</h3>
-          <ul>
-            <li>2x CPU @ 3.8GHz</li>
-            <li>32GB RAM</li>
-            <li>1TB NVMe</li>
-            <li>3 IP-адреса</li>
-            <li>До 1 Гбит/с</li>
-          </ul>
-          <strong>от $99/мес</strong>
-        </div>
-        <div class="card">
-          <h3>Enterprise</h3>
-          <ul>
-            <li>4x CPU @ 4.0GHz</li>
-            <li>128GB RAM</li>
-            <li>2TB NVMe + RAID</li>
-            <li>Безлимит IP</li>
-            <li>10 Гбит/с</li>
-          </ul>
-          <strong>от $299/мес</strong>
-        </div>
-      </div>
-    </section>
+                <article class="pricing__item">
+                    <h3 class="pricing__item__title">Enterprise</h3>
+                    <ul class="pricing__item__list">
+                        <li class="pricing__item__element">4x CPU @ 4.0GHz</li>
+                        <li class="pricing__item__element">128GB RAM</li>
+                        <li class="pricing__item__element">2TB NVMe + RAID</li>
+                        <li class="pricing__item__element">Безлимит IP</li>
+                        <li class="pricing__item__element">10 Гбит/с</li>
+                    </ul>
+                    <strong class="pricing__item__price">от $299/мес</strong>
+                </article>
+            </section>
+        </section>
 
- <section id="contact">
-  <div class="centered">
-    <form>
-        <h2>Свяжитесь с нами</h2>
-      <input type="text" placeholder="Ваше имя" disabled />
-      <input type="email" placeholder="Email" disabled />
-      <textarea rows="5" placeholder="Сообщение" disabled></textarea>
-      <button type="submit" disabled>Отправить</button>
-    </form>
-  </div>
-</section>
+        <section class="contact">
+            <form class="contact__form">
+                <h2 class="contact__title">Свяжитесь с нами</h2>
+                <input type="text" placeholder="Ваше имя" disabled class="contact__element">
+                <input type="email" placeholder="Email" disabled class="contact__element">
+                <textarea rows="5" placeholder="Сообщение" disabled class="contact__element"></textarea>
+                <button type="submit" disabled class="contact__element contact__button">Отправить</button>
+            </form>
+        </section>
 
-  <section id="build-your-server">
-  <div class="centered">
-    <div class="server-builder">
-       <h2>Соберите свой сервер</h2>
-      <label for="cpu">Процессор:</label>
-      <select id="cpu">
-        <option value="3">1x CPU @ 3.0GHz</option>
-        <option value="5">2x CPU @ 3.5GHz</option>
-        <option value="8">4x CPU @ 4.0GHz</option>
-      </select>
+        <section class="building">
+            <h2 class="building__title">Соберите свой сервер</h2>
 
-      <label for="ram">Оперативная память:</label>
-      <select id="ram">
-        <option value="8">8GB</option>
-        <option value="16">16GB</option>
-        <option value="32">32GB</option>
-        <option value="64">64GB</option>
-        <option value="128">128GB</option>
-      </select>
+            <label for="cpu" class="building__label">Процессор:</label>
+            <select id="cpu" class="building__select">
+                <option value="3" class="building__option">1x CPU @ 3.0GHz</option>
+                <option value="5" class="building__option">2x CPU @ 3.5GHz</option>
+                <option value="8" class="building__option">4x CPU @ 4.0GHz</option>
+            </select>
 
-      <label for="storage">Накопитель:</label>
-      <select id="storage">
-        <option value="128">128GB SSD</option>
-        <option value="256">256GB SSD</option>
-        <option value="512">512GB NVMe</option>
-        <option value="1024">1TB NVMe</option>
-      </select>
+            <label for="ram" class="building__label">Оперативная память:</label>
+            <select id="ram" class="building__select">
+                <option value="8" class="building__option">8GB</option>
+                <option value="16" class="building__option">16GB</option>
+                <option value="32" class="building__option">32GB</option>
+                <option value="64" class="building__option">64GB</option>
+                <option value="128" class="building__option">128GB</option>
+            </select>
 
-      <label for="ips">IP-адреса:</label>
-      <select id="ips">
-        <option value="1">1 шт.</option>
-        <option value="3">3 шт.</option>
-        <option value="5">Безлимит</option>
-      </select>
+            <label for="storage" class="building__label">Накопитель:</label>
+            <select id="storage" class="building__select">
+                <option value="128" class="building__option">128GB SSD</option>
+                <option value="256" class="building__option">256GB SSD</option>
+                <option value="512" class="building__option">512GB NVMe</option>
+                <option value="1024" class="building__option">1TB NVMe</option>
+            </select>
 
-      <label for="bandwidth">Пропускная способность:</label>
-      <select id="bandwidth">
-        <option value="100">100 Мбит/с</option>
-        <option value="1000">1 Гбит/с</option>
-        <option value="10000">10 Гбит/с</option>
-      </select>
+            <label for="ips" class="building__label">IP-адреса:</label>
+            <select id="ips" class="building__select">
+                <option value="1" class="building__option">1 шт.</option>
+                <option value="3" class="building__option">3 шт.</option>
+                <option value="5" class="building__option">Безлимит</option>
+            </select>
 
-      <a href="login.html" class="calculate-btn">Рассчитать стоимость</a>
-    </div>
-	<iframe 
-    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac107b62547549f41a09ecd66f1e25901e04f48a1d642091095fc3deb1f03c68f&amp;source=constructor" 
-    width="500" 
-    height="400" 
-    frameborder="0"
-    style="border-radius: 10%;   margin-top: 5%;"
-></iframe>
-  </div>
-</section>
-  </main>
+            <label for="bandwidth" class="building__label">Пропускная способность:</label>
+            <select id="bandwidth" class="building__select">
+                <option value="100" class="building__option">100 Мбит/с</option>
+                <option value="1000" class="building__option">1 Гбит/с</option>
+                <option value="10000" class="building__option">10 Гбит/с</option>
+            </select>
 
-  <footer id="site-footer">
-    <p><a href="#about">О нас</a></p>
-    <p><a href="#contact">Контакты</a></p>
-    <p>&copy; 2025 CloudRack. Все права защищены.</p>
-  </footer>
+            <a href="login.html" class="building__button">Рассчитать стоимость</a>
+            
+            <article class="map">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac107b62547549f41a09ecd66f1e25901e04f48a1d642091095fc3deb1f03c68f&amp;source=constructor" 
+                    width="500" 
+                    height="400" 
+                    frameborder="0"
+                    style="border-radius: 10%;   margin-top: 5%;">
+                </iframe>
+            </article>
+        </section>
+    </main>
 
-  <a href="#" id="backToTop" class="back-to-top">↑</a>
+    <footer class="footer">
+        <p class="footer__element"><a href="#about">О нас</a></p>
+        <p class="footer__element"><a href="#contact">Контакты</a></p>
+        <p class="footer__element">&copy; 2025 CloudRack. Все права защищены.</p>
+    </footer>
 
+    <a href="#" id="backToTop" class="back-to-top">↑</a>
 
+    <script src="js/burger.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+    max-width: 1300px;
+    margin-inline: auto;
+    border-radius: 8px;
+}
+
+.hero__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+    .hero__title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero__title {
+        font-size: 1.1rem;
+    }
+}
+
+.hero__info {
+    font-size: 1.1rem;
+    color: #bbb;
+}

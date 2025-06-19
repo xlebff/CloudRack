@@ -1,0 +1,125 @@
+header {
+    background: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    
+    padding: 2% 5%;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header__title {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.navbar {
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.navbar__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar__element {
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar__element a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.navbar__element a:hover {
+    color: #0ff;
+}
+
+.navbar__button {
+    background-color: #00ffff;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.navbar__button a {
+    color: #000;
+}
+
+.navbar__button:hover {
+    background-color: #00cfcf;
+}
+
+.header__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.header__burger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 800px) {
+    .header__burger {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: #1e1e1e;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header__burger.active .header__burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .header__burger.active .header__burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header__burger.active .header__burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
